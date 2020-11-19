@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TopController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\EntryController;
+use App\Http\Controllers\UploadController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +18,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [TopController::class, 'view'])->name('top');
+Route::get('/login', [LoginController::class, 'view'])->name('login');
+Route::get('/entry', [EntryController::class, 'view'])->name('entry');
+Route::get('/upload/{id}', [UploadController::class, 'view'])->name('upload');
+Route::get('/home/{id}', [HomeController::class, 'view'])->name('home');
+
+Route::post('/entry-submit', [EntryController::class, 'store'])->name('entry-submit');
+Route::post('/login-submit', [LoginController::class, 'login'])->name('login-submit');
+Route::post('/upload-submit', [UploadController::class, 'store'])->name('upload-submit');

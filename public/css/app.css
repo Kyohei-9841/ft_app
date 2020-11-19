@@ -1,0 +1,97 @@
+html{
+    line-height:1.15;
+    -webkit-text-size-adjust:100%
+}
+
+body{
+    margin:0
+}
+
+a:link { color: white; }
+a:visited { color: white; }
+a:hover { color: #ff0000; }
+a:active { color:white; }
+
+/* 追加CSS */
+
+/* ヘッダー */
+header {
+    height: 100px;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #337079;
+    color: white;
+}
+
+header .headline {
+    line-height: 100px;
+    float: left;
+    font-size: 30px;
+    margin-left: 100px;
+}
+
+.nav-list {
+    line-height: 100px;
+    float: left;
+    margin-left: 30px;
+    list-style: none;
+}
+
+.nav-list-item {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+/* メイン */
+.app-contents {
+    width: 80%;
+    margin: 10px auto;
+}
+
+/* フッター */
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #337079;
+    color: white;
+    text-align: center;
+}
+
+ul.footer-menu li {
+    display: inline;
+}
+
+.login-button {
+    margin: 5px 0px;
+    padding: 3px 7px;
+    background-color: olive;
+    text-decoration:none;
+    border-radius: 5px;
+}
+
+.entry-button {
+    margin: 5px 0px;
+    padding: 3px 7px;
+    background-color: olive;
+    text-decoration:none;
+    border-radius: 5px;
+}
+
+.entry-form-item {
+    text-align: center;
+}
+
+.entry-form-submit
+.login-form-submit
+.upload-form-submit {
+    text-align: right;
+}
+
+.form-label {
+    width: 40%;
+}
+
+.form-input {
+    width: 40%;
+}
