@@ -3,24 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
 
 class HomeController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     /**
-     * アップロード画面表示
-     * @return \Illuminate\Http\Response
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function view(Request $request, $id)
+    public function index()
     {
-        \Log::debug('アップロード');
-
-        $match_user = User::where('id', $id)->get();
-        $user = $match_user[0];
-
-        \Log::debug($user);
-
-        return view("home.view")->with(compact('user'));
+        return view('home');
     }
 }
